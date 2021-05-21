@@ -57,7 +57,9 @@
   background-color: white;
   color: var(--text-color);
 }
-
+.none-scroll{
+  overflow-y: hidden;
+}
 .container {
   max-width: 1254px;
   padding-left: 25px;
@@ -832,4 +834,238 @@
 
 .copyright {
   margin: 0;
+}
+
+@media screen and (max-width:768px) {
+  .container {
+    max-width: 738px;
+    padding: 0px 30px;
+    /* overflow-x: hidden; */
+  }
+  .site-main {
+    padding-top: 20px !important;
+  }
+  .logo {
+    margin: auto;
+  }
+  .site-header {
+    padding-bottom: 0px !important;
+  }
+  .site-nav__list {
+    justify-content: center;
+  }
+  .mission {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/student-woman.png');
+  }
+  .mission__content {
+    margin-right: 0px !important;
+    text-align: center;
+    margin: 0 auto !important;
+    padding-top: 30px;
+  }
+  .mission__content-title {
+    color: white;
+    text-align: center;
+    margin: auto;
+  }
+  .mission__content-text {
+    color: white;
+    text-align: center;
+  }
+  .mission__content-btn{
+    margin: auto;
+  }
+  .services__item{
+    margin: 0 !important;
+    margin-bottom: 30px !important;
+  }
+  .news__item{
+    margin: 0 !important;
+    margin-bottom: 30px !important;
+  }
+  .news__list{
+    margin-bottom: 0px !important;
+  }
+  .upcoming{
+    padding:50px 0px;
+  }
+  .countries__item {
+    margin-right: 0px !important;
+    text-align: center;
+}
+.testimional__list{
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.testimional__item_last {
+position: static !important;
+
+}
+.testimional__item{
+  margin-right: 0px !important;
+ text-align: center;
+  margin-bottom: 30px;
+}
+.about-person{
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+}
+.about-us{
+  margin-right: 0px !important;
+}
+.apply-section__container{
+  flex-direction: column;
+  padding: 30px 0px;
+}
+.apply-section__title{
+  margin-bottom: 30px;
+}
+.footer__container{
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+}
+.footer__list{
+  margin: 0 !important;
+}
+.footer-logo{
+  justify-content: center;
+}
+.copyright{
+  display: none;
+}
+.footer__item_address{
+  margin-bottom: 20px !important;
+}
+.about-us{
+  margin-bottom: 30px;
+}
+.footer__icon{
+  margin-top: 20px;
+  padding: 0 !important;
+}
+}
+@media screen and (max-width:432px) {
+  .container{
+    max-width: 432px !important;
+    overflow-x: hidden;;
+  }
+  .site-header{
+    padding-top: 10px;
+  }
+  .site-nav__list{
+    position: absolute;
+    background-color: white;
+    height: 100vh;
+    width: 60vw;
+    left: 0;
+    z-index: 99;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 30px;
+    margin-top: 45px;
+    text-align: left;
+    transform: translateX(-300px);
+    transition: transform 0.5s ease;
+  }
+  .site-nav__link_btn{
+    position: absolute;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    left: 15%;
+    top: 50%;
+  }
+  .active{
+    transform: translateX(0px) !important;
+  }
+  .btn-reset {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+  }
+  
+  .burger {
+    --burger-width: 40px;
+    --burger-height: 20px;
+    --burger-line-height: 2px;
+    width: var(--burger-width);
+    height: var(--burger-height);
+    position: relative;
+    color: #000;
+    left: -75vw;
+  }
+  
+  .burger__line {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: var(--burger-line-height);
+    background-color: currentColor;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .burger::before,
+  .burger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: var(--burger-line-height);
+    background-color: currentColor;
+    transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  }
+  
+  .burger::before {
+    top: 0;
+  }
+  
+  .burger::after {
+    top: calc(100% - var(--burger-line-height)); 
+  }
+  
+  .burger--active .burger__line {
+    transform: scale(0);
+  }
+  
+  .burger--active::before {
+    transform: rotate(45deg);
+    top: 50%;
+  }
+  
+  .burger--active::after {
+    transform: rotate(-45deg);
+    top: 50%;
+  }
+  .mission__content-title{
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .mission__content-text{
+    font-size: 18px;
+  }
+  .mission__content-btn{
+    padding: 10px 15px;
+  }
+  .mission__icon-list{
+    display: none;
+  }
+  .universities__item{
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  .universities__item:last-child{
+    margin-bottom: 0;
+  }
+  .title{
+    font-size: 30px;
+  }
+  .apply-section__title{
+    text-align: center;
+  }
 }
