@@ -635,6 +635,9 @@
   font-weight: 500;
   line-height: 27px;
 }
+.burger{
+  display: none;
+}
 
 /* TESTMIONAL STYLES */
 
@@ -997,6 +1000,7 @@ position: static !important;
     position: relative;
     color: #000;
     left: -75vw;
+    display: block;
   }
   
   .burger__line {
